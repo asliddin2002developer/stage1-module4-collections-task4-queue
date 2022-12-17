@@ -22,7 +22,9 @@ public class DishOrderDeterminer {
             result.add(dishes.get(index));
             dishes.remove(index);
         }
-        result.add(dishes.get(0));
+        if (dishes.size() > 0) {
+            result.add(dishes.get(0));
+        }
 
         return result;
     }
